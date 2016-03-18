@@ -27,7 +27,7 @@ struct node * sortLinkedList(struct node *head) {
 	while (head->next != NULL)
 	{
 		temp = head->next;
-		while (temp->next != NULL)
+		while (temp != NULL)
 		{
 			if (head->num > temp->num)
 			{
@@ -36,12 +36,6 @@ struct node * sortLinkedList(struct node *head) {
 				temp->num = tn;
 			}
 			temp = temp->next;
-		}
-		if (head->num > temp->num)
-		{
-			tn = head->num;
-			head->num = temp->num;
-			temp->num = tn;
 		}
 		head = head->next;
 	}

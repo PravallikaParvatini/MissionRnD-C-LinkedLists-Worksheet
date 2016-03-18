@@ -28,7 +28,7 @@ void sll_012_sort(struct node *head){
 	while (n->next != NULL)
 	{
 		temp = n->next;
-		while (temp->next != NULL)
+		while (temp!= NULL)
 		{
 			if (n->data > temp->data)
 			{
@@ -37,12 +37,6 @@ void sll_012_sort(struct node *head){
 				temp->data = tn;
 			}
 			temp = temp->next;
-		}
-		if (n->data > temp->data)
-		{
-			tn = n->data;
-			n->data = temp->data;
-			temp->data = tn;
 		}
 		n = n->next;
 	}
